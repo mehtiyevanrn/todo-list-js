@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" /> -->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            position:relative;
+            min-height: 100vh;
+            background-color:#181818;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-transform: capitalize;
+        }
+        body::before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: linear-gradient(#ff4f81,#f0f);
+            clip-path: circle(20% at right 80%);
+        }
+        body::after{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: linear-gradient(#ff4f81,#f0f);
+            clip-path: circle(15% at left 20%);
+        }
+        .container{
+            position:relative;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            z-index: 1;
+            max-width: 800px;
+            margin:auto;
+        }
+        .card{
+            position: relative;
+            width:90%;
+            background:rgba(175, 21, 106, 0.9);
+            box-shadow: 20px 20px 50px rgba(0,0,0,0.8);
+            border-radius:5px;
+            padding:20px;
+            margin:50px 0;
+            color:#fff;
+        }
+        .card-header{
+            display:flex;
+            align-items:center;
+            padding:10px 0;
+            border-bottom:3px solid  #ff4f81;
+        }
+        .card-header i{
+            margin-left:auto;
+            cursor:pointer;
+        }
+        .card-body{
+            padding:10px 0;
+            height:300px;
+            overflow-y: scroll;
+        }
+        .todo-list{
+            list-style: none;
+        }
+        .todo-item{
+            display:flex;
+            flex-direction: row;
+            align-items:center;
+            justify-content:space-between;
+            margin-bottom:10px;
+            padding:10px;
+            border-radius:5px;
+            /* background-color: rgba(57, 14, 177, 0.1); */
+        }
+        .todo-item li{
+            flex-grow:1;
+            font-size:14px;
+            cursor: default;
+        }
+        .todo-item i{
+            font-size:17px;
+            margin:0 5px;
+            cursor:pointer
+        }
+        .card-footer{
+            padding:10px 0;
+            display:flex;
+        }
+        .card-footer input{
+            width:100%;
+            font-size:15px;
+            line-height:30px;
+            color:#fff;
+            padding:5px 10px;
+            background-color: rgba(255,255,255,.1);
+            border:none;
+            border-radius:5px 0 0 5px;
+            text-transform: capitalize;
+        }
+        .card-footer input:focus, .card-footer button:focus{
+            outline:none;
+        }
+        .card-footer button{
+            border-radius:0px 5px 5px 0;
+            background-color:#ff4f81;
+            width:60px;
+            font-size:18px;
+            color:#fff;
+            border:none;
+            cursor:pointer;
+        }
+        .card-footer button:hover{
+            background-color:#ff6793;
+        }
+        .done{
+            background-color:rgba(0,0,0,0.5)
+        }
+        .todo{
+            display:flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- todo list yeni -->
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>yapilacaklar listesi</h2>
+                <i class="far fa-square"></i>
+            </div>
+            <div class="card-body">
+                <ul class="todo-list" id="todo-list">
+                </ul>
+            </div>
+            <div class="card-footer">
+                <input type="text" id="todo-input" placeholder="yeni yapilacaklar...">
+                <button id="todo-btn"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
